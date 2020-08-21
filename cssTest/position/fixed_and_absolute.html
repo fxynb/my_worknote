@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位中增加绝对定位</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            height: 1000px;
+            width: 1000px;
+            margin: 0 auto;
+            background-color: red;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        
+        .content {
+            position: fixed;
+            width: 1200px;
+            height: 200px;
+            background-color: green;
+        }
+        
+        .absolute {
+            position: absolute;
+            background-color: black;
+            width: 500px;
+            height: 100px;
+            /* z-index没有效果，dom元素在前的层级低于dom元素在后的层级  */
+            z-index: 999;
+        }
+        
+        .footer {
+            position: absolute;
+            top: 200px;
+            width: 1500px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="footer"></div>
+        <div class="content">
+            <div class="absolute"></div>
+        </div>
+    </div>
+</body>
+
+</html>

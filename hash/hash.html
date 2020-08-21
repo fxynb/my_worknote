@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈希函数</title>
+</head>
+
+<body>
+    <script>
+        //设计哈希函数
+        // 1.将字符串转换成比较大的数字：hanscode
+        // 2.将大的数字hashcode压缩到数组的范围（大小）之内
+        function hashFun(str, size) {
+            //定义hashcode变量
+            let hashcode = 0
+
+            //2.霍纳算法来计算hashcode的值
+            //cat ->Unicode编码
+            for (let i = 0; i < str.length; i++) {
+                hashcode = 37 * hashcode + str.charCodeAt(i)
+            }
+            let index = hashcode % size
+            return index
+        }
+
+        console.log(hashFun("desa", 10))
+        console.log(hashFun("deqd", 10))
+        console.log(hashFun("frgd", 10))
+    </script>
+</body>
+
+</html>

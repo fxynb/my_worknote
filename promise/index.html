@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p onclick="todo()">asdada</p>
+</body>
+<script>
+    var am = function() {
+
+    }
+
+    //promise 是一个异步的方法，只有执行resolve或者reject的时候才会执行下一步，而reject 或者resolve不会执行 使用resolve() 才会执行
+
+
+    //promise 也可以通过外部的其他方法来控制promise执行下一步 如下面的例子，把resolve赋给外部函数，
+    // 外部就拥有了对promise内部的resolve执行控制能力，执行外部该方法，就相当于执行了内部的resolve()
+
+    function todo() {
+        new Promise((resolve, reject) => {
+            am = resolve
+        }).then((res) => {
+            console.log('123')
+        })
+        am()
+    }
+</script>
+
+</html>
