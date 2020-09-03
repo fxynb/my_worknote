@@ -1,5 +1,4 @@
 # 省略文字
-    的v今安徽省高大上抠脚大汉.....
     overflow:hiden 超出部分隐藏
     white-space:nowrap  文字不换行
     text-overflow:ellipsis 文字超出省略
@@ -11,4 +10,4 @@
 
 
 # vue 识别富文本编辑器中内容识别成html结构
-    v-html={我要识别的内容}
+    v-html={我要识别的文本内容}
