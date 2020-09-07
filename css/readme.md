@@ -11,3 +11,15 @@
 
 # vue 识别富文本编辑器中内容识别成html结构
     v-html={我要识别的文本内容}
+
+
+# 图片之间会有间隙
+    图片之间有时候会有一点间隙，产生的原因是浏览器把两个img标签之间的空格当成了空白节点
+    解决方式：1.多个img写在一行 
+              2.在img标签的父级上写：font-size:0;//这个在解决display：inline-block出现的问题也有帮助
+              3.使用display：block(img是内联元素)//要float一下才行 
+              4.使用letter-spacing属性  letter-spacing：属性增加或减少字符间的空白（字符间距）。 
+
+
+
+
