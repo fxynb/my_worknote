@@ -30,7 +30,7 @@
 
 事实上是因为 import '@babel/polyfill' 已经被抛弃
 
-因此，事实上是 去babel官网查看最新的 @babel/polyfill 的使用写法
+因此，需要去babel官网查看最新的 @babel/polyfill 的使用写法
 
 目前的写法是这样的：
 
@@ -38,7 +38,7 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 
-但还是会报错，可以试一试，那真让人头大
+但还是会报错，可以试一试，那真让人头大。。。。。
 
 
 
@@ -63,7 +63,8 @@ import "regenerator-runtime/runtime";
 
 这里的 browserslist 内容的含义可以自己去搜索查看
 
-2.其次安装两个插件，自己可以看一下有没有，有的话就没必要安装啦 
+2.其次安装两个插件，自己可以package.json看一下有没有，有的话就没必要安装啦 
+
 
 安装dev  "@vue/cli-plugin-babel"
 安装save  "core-js" 这里是指3以上的版本
