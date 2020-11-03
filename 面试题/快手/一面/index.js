@@ -32,19 +32,58 @@
 // console.log(c++)
 // console.log(++c)
 // console.log(c + 3)
+// console.log(3 + c)
 
 // d = c++
 
 //     console.log(d) //0
 
 
-9.
-var name = 'World!',
-    (function() {
-        if (typeof name === 'undefined') {
-            var name = 'jack'
-            console.log('Goodbye' + name)
-        } else {
-            console.log('Hello' + name)
-        }
-    })()
+// 9.  //重复定义的name，if不形成作用域，if中的var name 提升到作用域的最前端，所以name === undefined 是true
+// var name = 'World!';
+// (function() {
+//     if (typeof name === 'undefined') {
+//         var name = 'jack'
+//         console.log('Goodbye' + name)
+//     } else {
+//         console.log('Hello' + name)
+//     }
+// })()
+
+
+// 10. 请写出下列代码的输出结果:  //定义的变量是内向外查找，
+// var a = 10;
+// (function() {
+//     console.log(a)
+//     a = 5
+//     console.log(window.a)
+//     var a = 20;
+//     console.log(a)
+// })()
+// undefined
+// 10
+// 20
+
+
+// 11.
+// if (true) { var name = 'zhangsan' }
+// console.log(name) // zhangsan
+
+// 12.  ???  为什么，if判断也能形成作用域？  //看错了，实际上并没有形成作用域链，var提升变量了而已
+// if (true) { let name = 'zhangsan' }
+// console.log(name) //undefined
+
+
+
+// 13.设计一个函数，将连字符格式的字符串转化为驼峰式的字符串，即 my-common-function 转成 myCommonFunction
+
+
+//14.实现一个函数 find(obj, str)，满足:如var obj = {a:{b:{c:1}}};find(obj,'a.b.c') //返回1find(obj,'a.d.c') //返回undefined
+
+
+// 15.简写下ajax执行流程
+
+//16.实现一个vue弹窗组件，如下：<Modal :title="我是title" :visible="">   
+{ /* <content>我是content</content></Modal> */ }
+// import {Button, Modal} from 'antd';
+{ /* <Button></Button><Modal :title @onOk="" @onCancel=""></Modal> */ }
