@@ -32,3 +32,22 @@ function largestOfFour(arr) {
 function largestOfFour(arr) {
     return arr.map(Function.apply.bind(Math.max, null));
 }
+
+// function largestOfFour(arr) {
+//     // You can do this!
+//       var a = 0
+//       var num = 0
+//     for(let i = 0;i<arr.length;i++) {
+
+//       arr[i].map((e)=>{
+//         if(e>a) {
+//           a = e
+//           num = i
+//         }
+//       })
+//     }
+//     return arr[num];
+//     console.log(arr[num])
+//   }
+
+//   largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);

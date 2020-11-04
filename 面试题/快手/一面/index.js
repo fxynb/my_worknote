@@ -87,3 +87,9 @@
 { /* <content>我是content</content></Modal> */ }
 // import {Button, Modal} from 'antd';
 { /* <Button></Button><Modal :title @onOk="" @onCancel=""></Modal> */ }
+
+
+
+// let [a, b, c, d, e] = "hello";
+
+// console.log([a, b, c, d, e])
