@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>123</div>
+    <script>
+        const xhr = new XMLHttpRequest()
+            //open方法用来设置请求方式和地址
+        xhr.open('get', 'http://localhost:3000/first')
+            // 发送请求
+        xhr.send()
+            //获取服务端响应的数据
+        xhr.onload = function() {
+            console.log(xhr.responseText)
+        }
+    </script>
+</body>
+
+</html>
