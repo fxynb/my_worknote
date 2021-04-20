@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .carouse {
+        width: 800px;
+        height: 400px;
+        position: relative;
+    }
+    
+    .list {
+        width: 800px;
+        height: 400px;
+        list-style: none;
+        position: relative;
+    }
+    
+    .item {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    
+    .item:nth-child(1) {
+        background-color: red;
+    }
+    
+    .item:nth-child(2) {
+        background-color: green;
+    }
+    
+    .item:nth-child(3) {
+        background-color: blue;
+    }
+    
+    .item:nth-child(4) {
+        background-color: black;
+    }
+    
+    .item:nth-child(5) {
+        background-color: goldenrod;
+    }
+    
+    .btn {
+        width: 20px;
+        height: 100px;
+        position: absolute;
+        z-index: 999;
+    }
+    
+    .pre {
+        top: 150px;
+        left: 0;
+    }
+    
+    .next {
+        top: 150px;
+        right: 0;
+    }
+    
+    .item.active {
+        opacity: 1;
+        z-index: 10;
+    }
+</style>
+
+<body>
+    <div class="carouse">
+        <ul class="list">
+            <li class="item active" id="1">1</li>
+            <li class="item" id="2">2</li>
+            <li class="item" id="2">3</li>
+            <li class="item" id="2">4</li>
+            <li class="item" id="2">5</li>
+        </ul>
+        <button type="button" class="btn pre" id="pre"><</button>
+        <button type="button" class="btn next id
+        " id="next">></button>
+    </div>
+</body>
+<script>
+    var items = document.getElementsByClassName('item')
+    var pre = document.getElementsByClassName('pre')
+    var next = document.getElementsByClassName('next') //这是一个数组不能直接监听
+        // document.getElementById(next)
+    var index = 0
+
+
+    function goIndex() {
+        clearActive()
+        items[index].className = 'item active'
+    }
+
+    function clearActive() { //清除层级
+        console.log(1)
+        for (let i = 0; i < 5; i++) {
+            items[i].className = 'item'
+        }
+    }
+
+    //下一张
+    function goNext() {
+        // console.log(index)
+        if (index < 4) {
+            index++
+        } else {
+            index = 0
+        }
+        // console.log(index)
+        goIndex()
+    }
+    next[0].addEventListener('click', function() {
+        goNext()
+    })
+
+    //上一张
+    function goPre() {
+        if (index > 0) {
+            index--
+        } else {
+            index = 4
+        }
+        goIndex()
+    }
+    pre[0].addEventListener('click', function() {
+        goPre()
+    })
+</script>
+
+</html>
